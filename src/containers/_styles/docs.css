@@ -1,0 +1,13 @@
+/********** Docs css **********/
+table{color: #414965;font-size: 14px;}
+    .table thead th{border:none;}
+    .table td, .table th{border:none;padding: 20px;border-bottom: 15px solid white;}
+    .table td:nth-child(1){max-width: 20px;}
+    .table td:nth-child(3) , .table td:nth-child(4){color: #848daf;}
+    tbody> tr:nth-child(even)>td{background-color: #e5e8f4;}
+    tbody> tr:nth-child(odd)>td{background-color: #fff;}
+    tbody> tr>td.check{background-color: #fff;}
+    .table td.active{color: #67bdf8;}
+
+  .pagination{margin-left: 19px;}
+    .pagination li{padding: 10px;}

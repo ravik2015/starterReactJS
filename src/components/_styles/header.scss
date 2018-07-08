@@ -1,0 +1,47 @@
+.navbar {
+    background-color: #fff !important;
+    padding: 0 !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    color: #666;
+    z-index: 1;
+    .navbar-brand {
+        position: relative;
+        padding: 15px;
+        width: 250px;
+        border-right: 1px solid #ddd;
+        .brand {
+            position: absolute;
+            top: 0;
+            left: 5px;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-size: 90%;
+            border-radius: 20px;
+        }
+    }
+    .form-inline {
+        input {
+            border: 0;
+            background: transparent url(../../assets/images/search.png) no-repeat left center;
+            color: #999;
+            padding-left: 35px;
+        }
+    }
+    .proicon {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #e5e4e4;
+        color: #697b8c;
+        text-align: center;
+        line-height: 38px;
+        margin-right: 5px;
+    }
+    .navbar-nav {
+        margin-right: 15px;
+    }
+}
+
+

@@ -1,0 +1,109 @@
+.record-step4 {
+
+    .home-humility {
+        text-align: center;
+    }
+
+    .home-fa-twitter {
+        margin-left: 2em;
+    }
+
+    .record-sec {
+        canvas {
+            display: none;
+        }
+        button.on-rec{
+            font-size: 17px;
+            color: #e84748;
+            background-color: white;
+            border: 1px solid #e84748;
+            padding: 7px 14px;
+            border-radius: 4px;
+            outline: none;
+        }
+        button.off-rec{
+            outline: none;
+            font-size: 17px;
+            color: white;
+            background-color: #e84748;
+            border-radius: 4px;
+            border: none;
+            padding: 7px 14px;
+        }
+
+
+        button.hasAudio,
+        button.AudioRecorder-remove,
+        button.AudioRecorder-download {
+            display: none;
+        }
+    }
+    .timer{
+        font-size: 20px;
+        margin-left: 13px;
+        margin-top: 4px;
+    }
+
+    .card-header h2 {
+        font-weight: bold;
+    }
+
+    .card-block p {
+        color: #414965;
+        font-weight: bolder;
+        font-size: small;
+        width: 80%;
+        margin: 1em auto 3em;
+        button {
+
+        }
+    }
+
+    .input-group {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        height: 52px;
+        input {
+            font-size: medium;
+            padding-top: 25px;
+        }
+        label{
+            position: absolute;
+            top: 3px;
+            left: 13px;
+            z-index: 9;
+            color: #ced4db;
+            font-size: smaller;
+            padding-top: 3px;
+        }
+        span{
+            position: absolute;
+            right: 13px;
+            top: 15px;
+            z-index: 9;
+            i{
+                border: 1px solid gray;
+                border-radius: 50%;
+                font-size: 20px;
+            }
+        }
+
+    }
+
+    .chip-sec {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 2em;
+        .chip {
+            margin: 3px;
+            height: 27px;
+            span {
+                font-size: smaller;
+            }
+            svg {
+                font-size: large;
+            }
+        }
+    }
+}

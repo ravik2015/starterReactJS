@@ -1,0 +1,84 @@
+.record-step4 .home-humility {
+  text-align: center; }
+
+.record-step4 .home-fa-twitter {
+  margin-left: 2em; }
+
+.record-step4 .record-sec canvas {
+  display: none; }
+
+.record-step4 .record-sec button.on-rec {
+  font-size: 17px;
+  color: #e84748;
+  background-color: white;
+  border: 1px solid #e84748;
+  padding: 7px 14px;
+  border-radius: 4px;
+  outline: none; }
+
+.record-step4 .record-sec button.off-rec {
+  outline: none;
+  font-size: 17px;
+  color: white;
+  background-color: #e84748;
+  border-radius: 4px;
+  border: none;
+  padding: 7px 14px; }
+
+.record-step4 .record-sec button.hasAudio,
+.record-step4 .record-sec button.AudioRecorder-remove,
+.record-step4 .record-sec button.AudioRecorder-download {
+  display: none; }
+
+.record-step4 .timer {
+  font-size: 20px;
+  margin-left: 13px;
+  margin-top: 4px; }
+
+.record-step4 .card-header h2 {
+  font-weight: bold; }
+
+.record-step4 .card-block p {
+  color: #414965;
+  font-weight: bolder;
+  font-size: small;
+  width: 80%;
+  margin: 1em auto 3em; }
+
+.record-step4 .input-group {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 52px; }
+  .record-step4 .input-group input {
+    font-size: medium;
+    padding-top: 25px; }
+  .record-step4 .input-group label {
+    position: absolute;
+    top: 3px;
+    left: 13px;
+    z-index: 9;
+    color: #ced4db;
+    font-size: smaller;
+    padding-top: 3px; }
+  .record-step4 .input-group span {
+    position: absolute;
+    right: 13px;
+    top: 15px;
+    z-index: 9; }
+    .record-step4 .input-group span i {
+      border: 1px solid gray;
+      border-radius: 50%;
+      font-size: 20px; }
+
+.record-step4 .chip-sec {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 2em; }
+  .record-step4 .chip-sec .chip {
+    margin: 3px;
+    height: 27px; }
+    .record-step4 .chip-sec .chip span {
+      font-size: smaller; }
+    .record-step4 .chip-sec .chip svg {
+      font-size: large; }
