@@ -1,12 +1,12 @@
 /*********** Routes for applications **************/
-import React from "react";
-import { Switch } from "react-router-dom";
-import AppRoute from "./AppRoute";
-import { auth } from "../utilities/auth";
-import NotFound from "../components/NotFound";
-import { frontLayout, dashboardLayout } from "../components/Layouts";
-import Login from "../containers/Login";
-import Home from "../containers/Home";
+import React from 'react';
+import { Switch } from 'react-router-dom';
+import AppRoute from './AppRoute';
+import { auth } from '../utilities/auth';
+import NotFound from '../components/NotFound';
+import { frontLayout, dashboardLayout } from '../components/Layouts';
+import Login from '../containers/Login';
+import Dashboard from '../containers/Dashboard';
 
 const Routers = store => {
   return (
@@ -25,12 +25,12 @@ const Routers = store => {
         <AppRoute
           exact
           path="/dashboard"
-          component={Home}
+          component={Dashboard}
           requireAuth={auth}
           layout={dashboardLayout}
           store={store}
         />
-        
+
         <AppRoute
           exact
           path="*"

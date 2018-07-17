@@ -5,9 +5,9 @@
  * @author: Jasdeep Singh
  */
 
-import RestClient from "../../utilities/RestClient";
-import message from "../../constants/messages";
-import * as TYPE from "../../constants/action-types";
+import RestClient from '../../utilities/RestClient';
+import message from '../../constants/messages';
+import * as TYPE from '../../constants/action-types';
 
 //Action Creator For Reducers
 
@@ -19,9 +19,8 @@ export const log_out = () => ({ type: TYPE.LOG_OUT });
 /****** action creator for login ********/
 export const login = (params, cb) => {
   return dispatch => {
-    RestClient.post("user/login", params)
+    RestClient.post('user/login', params)
       .then(result => {
-        console.log("result", result);
         if (result.success) {
           dispatch(login_Success(result.data));
           let res = {

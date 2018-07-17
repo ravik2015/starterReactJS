@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import recordImage from "../assets/images/record_interview.png";
 import researchImage from "../assets/images/reserch.png";
 
-export default class Home extends Component {
-  render() {
+export default () => {
     return (
       <div className="main-content">
         <div className="row">
@@ -58,5 +57,4 @@ export default class Home extends Component {
         </div>
       </div>
     );
-  }
-}
+};

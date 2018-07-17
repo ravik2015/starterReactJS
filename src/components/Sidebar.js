@@ -1,15 +1,14 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { withRouter } from "react-router";
-import { Link } from "react-router-dom";
-import "./_styles/sidebar.css";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router';
+import { Link } from 'react-router-dom';
 
 class Sidebar extends Component {
   render() {
     const pathname = this.props.history.location.pathname;
-    const isLoginPage = pathname.indexOf("register") > -1;
-    const isRegisterPage = pathname.indexOf("login") > -1;
-    const isForgotPasswordPage = pathname.indexOf("forgot_password") > -1;
+    const isLoginPage = pathname.indexOf('register') > -1;
+    const isRegisterPage = pathname.indexOf('login') > -1;
+    const isForgotPasswordPage = pathname.indexOf('forgot_password') > -1;
 
     return (
       !isLoginPage &&

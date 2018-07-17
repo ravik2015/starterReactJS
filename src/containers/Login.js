@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { login } from "../actions/user";
-import AlertMsg from "../components/AlertMsg";
-import { Link } from "react-router-dom";
-import { CircularProgress, Icon } from "@material-ui/core/es/index";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { login } from '../actions/user';
+import AlertMsg from '../components/AlertMsg';
+import { Link } from 'react-router-dom';
+import { CircularProgress, Icon } from '@material-ui/core/es/index';
 
 class Login extends Component {
   constructor(props) {
@@ -22,8 +22,8 @@ class Login extends Component {
   /*************** User Login *************/
   handleLogin = event => {
     event.preventDefault();
-    if (this.refs.username.value === "" || this.refs.password.value === "") {
-      this.setState({ validationErr: "Email and password is required!" });
+    if (this.refs.username.value === '' || this.refs.password.value === '') {
+      this.setState({ validationErr: 'Email and password is required!' });
     } else {
       let context = this,
         params = {
@@ -33,8 +33,8 @@ class Login extends Component {
       this.setState({ loggingIn: true });
       this.props.login(params, res => {
         if (res.status) {
-          this.refs.username.value = this.refs.password.value = ``;
-          context.props.history.replace("/dashboard");
+          this.refs.username.value = this.refs.password.value = '';
+          context.props.history.replace('/dashboard');
         } else {
           context.setState({
             open: true,
@@ -53,10 +53,7 @@ class Login extends Component {
     this.setState({
       password_visibility: !this.state.password_visibility
     });
-    this.refs.password.setAttribute(
-      "type",
-      !this.state.password_visibility ? `text` : `password`
-    );
+    this.refs.password.setAttribute('type', !this.state.password_visibility ? 'text' : 'password');
   };
 
   render() {
@@ -100,7 +97,7 @@ class Login extends Component {
                 {!user.loggedIn &&
                   validationErr && (
                     <div className="error-msg ">
-                      <i className="material-icons">clear</i>{" "}
+                      <i className="material-icons">clear</i>{' '}
                       <span> {this.state.validationErr}. </span>
                     </div>
                   )}
@@ -127,15 +124,10 @@ class Login extends Component {
                       />
 
                       <div className="input-group-append">
-                        <span
-                          onClick={this.changePasswordVisibility}
-                          className="input-group-text"
-                        >
+                        <span onClick={this.changePasswordVisibility} className="input-group-text">
                           <Icon>
-                            {" "}
-                            {!this.state.password_visibility
-                              ? `visibility_off`
-                              : `visibility`}
+                            {' '}
+                            {!this.state.password_visibility ? `visibility_off` : `visibility`}
                           </Icon>
                         </span>
                       </div>
@@ -143,16 +135,8 @@ class Login extends Component {
                   </div>
 
                   <div className="col-sm-12 form-group">
-                    <button
-                      disabled={loggingIn}
-                      type="submit"
-                      className="btn primary-btn"
-                    >
-                      {loggingIn ? (
-                        <CircularProgress size={15} color={"white"} />
-                      ) : (
-                        `Sign in`
-                      )}
+                    <button disabled={loggingIn} type="submit" className="btn primary-btn">
+                      {loggingIn ? <CircularProgress size={15} color={'white'} /> : `Sign in`}
                     </button>
                   </div>
 

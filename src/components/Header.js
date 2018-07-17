@@ -1,24 +1,19 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { withRouter } from "react-router";
-//import injectTapEventPlugin from 'react-tap-event-plugin';
-import { logOut } from "../actions/user";
-import logo from "../assets/images/logo.png";
-import menu from "../assets/images/hamburgr.png";
-
-import "./_styles/header.css";
-
-//injectTapEventPlugin();
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { withRouter } from 'react-router';
+import { logOut } from '../actions/user';
+import logo from '../assets/images/logo.png';
+import menu from '../assets/images/hamburgr.png';
 
 class Header extends Component {
   onLogoutClick = () => {
     const { user, history, logOut } = this.props;
     logOut({ token: user.token }, res => {
       if (res) {
-        history.push("/");
+        history.push('/');
       }
     });
   };
@@ -26,15 +21,15 @@ class Header extends Component {
   render() {
     const { user, history } = this.props;
     const pathname = history.location.pathname;
-    const isLoginPage = pathname.indexOf("register") > -1;
-    const isRegisterPage = pathname.indexOf("login") > -1;
-    const isForgotPasswordPage = pathname.indexOf("forgot_password") > -1;
+    const isLoginPage = pathname.indexOf('register') > -1;
+    const isRegisterPage = pathname.indexOf('login') > -1;
+    const isForgotPasswordPage = pathname.indexOf('forgot_password') > -1;
 
     return (
       !isLoginPage &&
       !isRegisterPage &&
       !isForgotPasswordPage && (
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark">        
+        <nav className="navbar navbar-expand-md navbar-dark bg-dark">
           <div className="navbar-brand">
             <Link to="/" className="pull-left">
               <img src={logo} alt="logo" />
@@ -72,12 +67,9 @@ class Header extends Component {
               </li>
 
               <li>
-                <button
-                  onClick={() => this.onLogoutClick()}
-                  className="btn btn-danger"
-                >
-                  {" "}
-                  Logout{" "}
+                <button onClick={() => this.onLogoutClick()} className="btn btn-danger">
+                  {' '}
+                  Logout{' '}
                 </button>
               </li>
             </ul>

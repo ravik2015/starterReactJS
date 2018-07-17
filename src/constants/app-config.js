@@ -8,9 +8,8 @@
 export const environment = {
   API_ROOT:
     window.location.protocol === 'https:'
-      ? `https://stagingsdei.com:4190/`
-      : `http://localhost:4190/`,
-  LOCAL_API_URL: `localhost:4190`,
-  STAGING_API_URL: `stagingsdei.com:4190`
+      ? 'https://stagingsdei.com:4190/'
+      : 'http://localhost:4190/',
+  LOCAL_API_URL: 'localhost:4190',
+  STAGING_API_URL: 'stagingsdei.com:4190'
 };
-
