@@ -12,7 +12,7 @@
       *                                                            *
 */
 
-import React, { Component } from "react";
+import React, { Component } from 'react';
 const HEIGHT = window.innerHeight;
 
 class NotFound extends Component {
@@ -32,8 +32,7 @@ class NotFound extends Component {
           <div className="row">
             <div className="col-md-6 col-md-push-3 offset-3">
               <p className="lead">
-                If you think what you're looking for should be here, please
-                contact the site owner.
+                If you think what you're looking for should be here, please contact the site owner.
               </p>
             </div>
           </div>

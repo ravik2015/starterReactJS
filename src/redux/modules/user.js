@@ -5,7 +5,7 @@
  * @author: Jasdeep Singh
 */
 
-import * as TYPE from "../../constants/action-types";
+import * as TYPE from '../../constants/action-types';
 
 /******** Reducers ********/
 

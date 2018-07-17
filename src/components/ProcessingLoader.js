@@ -12,8 +12,8 @@
       *                                                            *
 */
 
-import React, { Component } from "react";
-import { ScaleLoader } from "halogenium";
+import React, { Component } from 'react';
+import { ScaleLoader } from 'halogenium';
 
 class ProcessingLoader extends Component {
   render() {
@@ -21,18 +21,16 @@ class ProcessingLoader extends Component {
       <div>
         <div
           style={{
-            display: "block",
-            fontSize: "0",
-            position: "fixed",
-            zIndex: "9999",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)"
+            display: 'block',
+            fontSize: '0',
+            position: 'fixed',
+            zIndex: '9999',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)'
           }}
         >
-          {this.props.isShowingLoader && (
-            <ScaleLoader color="#3d8dbc" size="26px" margin="4px" />
-          )}
+          {this.props.isShowingLoader && <ScaleLoader color="#3d8dbc" size="26px" margin="4px" />}
         </div>
       </div>
     );

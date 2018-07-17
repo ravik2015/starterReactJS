@@ -7,11 +7,11 @@
  */
 
 const Message = {
-  emptyField: "Please Enter Value",
-  success: "Success",
-  error: "Error!",
-  commonError: "Something went wrong!",
-  logout: "Logout!"
+  emptyField: 'Please Enter Value',
+  success: 'Success',
+  error: 'Error!',
+  commonError: 'Something went wrong!',
+  logout: 'Logout!'
 };
 
 module.exports = Message;

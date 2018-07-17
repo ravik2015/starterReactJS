@@ -7,40 +7,40 @@
 
 /************ React Pages according to layouts  *****************/
 
-import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import React from 'react';
+import { Route, Redirect } from 'react-router-dom';
 
 const AppRoute = ({
   component: Component,
   layout: Layout,
   requireAuth,
-  to = "/",
+  to = '/',
   store,
-  type = "private",
+  type = 'private',
   ...rest
 }) => (
   <Route
     {...rest}
     render={props => {
       const isLogin = requireAuth(store);
-      if (isLogin && props.location.pathname === "/") {
+      if (isLogin && props.location.pathname === '/') {
         return (
           <Redirect
             to={{
-              pathname: "/dashboard",
+              pathname: '/dashboard',
               state: { from: props.location }
             }}
           />
         );
       }
-      if (type === "public") {
+      if (type === 'public') {
         return (
           <Layout>
             <Component {...props} />
           </Layout>
         );
       }
-      return isLogin || props.location.pathname === "/" ? (
+      return isLogin || props.location.pathname === '/' ? (
         <Layout>
           <Component {...props} />
         </Layout>

@@ -5,12 +5,12 @@
  * @author: Jasdeep Singh
  * */
 
-import Connection from "../constants/Connection";
-import querystring from "querystring";
-import axios from "axios";
+import Connection from '../constants/Connection';
+import querystring from 'querystring';
+import axios from 'axios';
 
 var config = {
-  headers: { "Content-Type": "application/json" }
+  headers: { 'Content-Type': 'application/json' }
 };
 
 class RestClient {
@@ -24,9 +24,9 @@ class RestClient {
           fulfill(response.data);
         })
         .catch(function(error) {
-          if(error && error.response){
+          if (error && error.response) {
             fulfill(error.response.data);
-          } else{
+          } else {
             reject(error);
           }
         });
@@ -41,9 +41,9 @@ class RestClient {
           fulfill(response.data);
         })
         .catch(function(error) {
-          if(error && error.response){
+          if (error && error.response) {
             fulfill(error.response.data);
-          } else{
+          } else {
             reject(error);
           }
         });
@@ -54,14 +54,14 @@ class RestClient {
     let query = querystring.stringify(params);
     return new Promise(function(fulfill, reject) {
       axios
-        .delete(Connection.getResturl() + url + "?" + query, config)
+        .delete(Connection.getResturl() + url + '?' + query, config)
         .then(function(response) {
           fulfill(response.data);
         })
         .catch(function(error) {
-          if(error && error.response){
+          if (error && error.response) {
             fulfill(error.response.data);
-          } else{
+          } else {
             reject(error);
           }
         });
@@ -72,18 +72,17 @@ class RestClient {
     let query = querystring.stringify(params);
     return new Promise(function(fulfill, reject) {
       axios
-        .get(Connection.getResturl() + url + "?" + query, config)
+        .get(Connection.getResturl() + url + '?' + query, config)
 
         .then(function(response) {
           fulfill(response.data);
         })
-        .catch(function(error) { 
-          if(error && error.response){
+        .catch(function(error) {
+          if (error && error.response) {
             fulfill(error.response.data);
-          } else{
+          } else {
             reject(error);
           }
-          
         });
     });
   }
