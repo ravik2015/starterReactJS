@@ -6,6 +6,7 @@ import { login } from '../actions/user';
 import AlertMsg from '../components/AlertMsg';
 import { Link } from 'react-router-dom';
 import { CircularProgress, Icon } from '@material-ui/core/es/index';
+import FrontHeader from '../components/FrontHeader';
 
 class Login extends Component {
   constructor(props) {
@@ -70,30 +71,12 @@ class Login extends Component {
             type={this.state.msgType}
             status={this.state.msgStatus}
           />
-          <div className="col-sm-7 p-0">
+          <div className="col-sm-12">
             <div className="inner-wrapper">
-              <div className="col-sm-12">
-                <ul className="list-inline">
-                  <li className="list-inline-item">
-                    {/*<img src="images/logo.png"> */}
-                    Logo
-                  </li>
-
-                  <li className="list-inline-item">Nav Item 1</li>
-
-                  <li className="list-inline-item">Nav Item 2</li>
-
-                  <li className="list-inline-item">Nav Item 3</li>
-                </ul>
-              </div>
-
-              <div className="center-img">Image TBD</div>
+              <FrontHeader />
             </div>
-          </div>
-
-          <div className="col-sm-5">
             <div className="login-wrapper animated fadeIn">
-              <div className="col-sm-12 center-form">
+              <div className="col-sm-6 offset-3 center-form">
                 {!user.loggedIn &&
                   validationErr && (
                     <div className="error-msg ">
@@ -102,7 +85,7 @@ class Login extends Component {
                     </div>
                   )}
 
-                <label>Welcome to Beacon</label>
+                <label className="center">Welcome to React</label>
 
                 <form onSubmit={this.handleLogin} className="mt-5 mb-4">
                   <div className="col-sm-12 form-group">
@@ -127,7 +110,7 @@ class Login extends Component {
                         <span onClick={this.changePasswordVisibility} className="input-group-text">
                           <Icon>
                             {' '}
-                            {!this.state.password_visibility ? `visibility_off` : `visibility`}
+                            {!this.state.password_visibility ? 'visibility_off' : 'visibility'}
                           </Icon>
                         </span>
                       </div>
@@ -136,7 +119,7 @@ class Login extends Component {
 
                   <div className="col-sm-12 form-group">
                     <button disabled={loggingIn} type="submit" className="btn primary-btn">
-                      {loggingIn ? <CircularProgress size={15} color={'white'} /> : `Sign in`}
+                      {loggingIn ? <CircularProgress size={15} color={'white'} /> : 'Sign in'}
                     </button>
                   </div>
 
@@ -154,13 +137,13 @@ class Login extends Component {
                     </span>
                   </div>
 
-                  <div className="col-sm-12 bottom-bar">
+                  <div className="col-sm-10 bottom-bar text-center">
                     <span className="form-link-text">
                       <a href="">Don't have an account? </a>
                     </span>
 
                     <span>
-                      <Link to="/register">Sign up</Link>
+                      <Link to="#">Sign up</Link>
                     </span>
                   </div>
                 </form>

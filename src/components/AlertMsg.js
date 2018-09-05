@@ -13,34 +13,46 @@
 */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import SweetAlert from 'react-bootstrap-sweetalert';
 
-const AlertMsg = props => {
+const AlertMsg = ({ isShowingModal, status, type, msg, onPress, actionConfirmed }) => {
   return (
-    <div>
-      {props.isShowingModal && (
+    <React.Fragment>
+      {isShowingModal && (
         <SweetAlert
-          showCancel={props.status === 'warning' ? true : false}
-          type={
-            props.status === false ? 'error' : props.status === 'warning' ? 'warning' : 'success'
-          }
-          title={props.type}
+          showCancel={status === 'warning' ? true : false}
+          type={status === false ? 'error' : status === 'warning' ? 'warning' : 'success'}
+          title={type}
           allowEscape
-          confirmBtnText={props.status === 'warning' ? 'Yes' : 'Close'}
-          confirmBtnBsStyle={
-            props.status === false || props.status === 'warning' ? 'danger' : 'success'
-          }
-          onConfirm={
-            props.status === 'warning' ? () => props.actionConfirmed() : () => props.onPress()
-          }
+          confirmBtnText={status === 'warning' ? 'Yes' : 'Close'}
+          confirmBtnBsStyle={status === false || status === 'warning' ? 'danger' : 'success'}
+          onConfirm={status === 'warning' ? () => actionConfirmed() : () => onPress()}
           cancelBtnBsStyle="default"
-          onCancel={() => props.onPress()}
+          onCancel={() => onPress()}
         >
-          {props.msg}
+          {msg}
         </SweetAlert>
       )}
-    </div>
+    </React.Fragment>
   );
+};
+
+AlertMsg.propTypes = {
+  isShowingModal: PropTypes.bool.isRequired,
+  status: PropTypes.any.isRequired,
+  type: PropTypes.string.isRequired,
+  msg: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
+  actionConfirmed: PropTypes.func.isRequired
+};
+
+AlertMsg.defaultProps = {
+  status: false,
+  type: '',
+  msg: '',
+  onPress: () => ({}),
+  actionConfirmed: () => ({})
 };
 
 export default AlertMsg;

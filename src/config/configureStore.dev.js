@@ -9,7 +9,7 @@ import { applyMiddleware, createStore } from 'redux';
 import { persistStore } from 'redux-persist';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import reducer from '../redux';
+import reducer from '../reducer';
 import { routerMiddleware } from 'react-router-redux';
 
 const logger = store => next => action => {

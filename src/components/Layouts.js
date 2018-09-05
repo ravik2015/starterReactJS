@@ -12,16 +12,20 @@ import Header from './Header';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 /*************** Front Layout ***************/
-export const frontLayout = props => (
-  <section className="main-content frontend" id="home">
-    <section className="content">{props.children}</section>
-  </section>
-);
+export const frontLayout = props => {
+  window.scrollTo(0, 0);
+  return (
+    <section className="main-content frontend" id="home">
+      <section className="content">{props.children}</section>
+    </section>
+  );
+};
 
 /*************** Dashboard Layout ***************/
 export const dashboardLayout = props => {
+  window.scrollTo(0, 0);
   return (
-    <div>
+    <React.Fragment>
       <Header />
       <ToastContainer />
       <div className="appContent">
@@ -30,8 +34,7 @@ export const dashboardLayout = props => {
           {props.children}
         </div>
       </div>
-
       <Footer />
-    </div>
+    </React.Fragment>
   );
 };
