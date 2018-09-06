@@ -1,4 +1,10 @@
-/*********** Routes for applications **************/
+/*
+ * @file: index.js
+ * @description: It Contain Routes for application.
+ * @date: 04.07.2018
+ * @author: Jasdeep Singh
+ */
+
 import React from 'react';
 import { Switch } from 'react-router-dom';
 import AppRoute from './AppRoute';

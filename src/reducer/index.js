@@ -7,7 +7,7 @@ import user from './modules/user';
 import encryptor from './encryptor';
 
 const userPersistConfig = {
-  key: 'beacon',
+  key: 'react-app',
   storage: storage,
   transforms: [encryptor],
   blacklist: ['isLoading']

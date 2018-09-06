@@ -1,5 +1,5 @@
 {
-  "name": "react",
+  "name": "react-app",
   "version": "1.1.1",
   "private": true,
   "dependencies": {
@@ -55,6 +55,7 @@
     "react-notification-system": "^0.2.16",
     "react-notification-system-redux": "^1.2.0",
     "react-redux": "^5.0.6",
+    "react-redux-form": "^1.16.10",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.9",
@@ -101,17 +102,26 @@
     "predeploy": "npm run build"
   },
   "reactSnapshot": {
-    "include": ["/signin"],
-    "exclude": ["/signup", "/dashboard/**"],
+    "include": [
+      "/signin"
+    ],
+    "exclude": [
+      "/signup",
+      "/dashboard/**"
+    ],
     "snapshotDelay": 5000
   },
-  "author": "Jasdeep",
-  "email": "abc@gmail.com",
+  "author": "Jasdeep Singh",
+  "email": "jasdeepajji@gmail.com",
   "url": "",
   "license": "MIT",
   "jest": {
-    "collectCoverageFrom": ["src/**/*.{js,jsx,mjs}"],
-    "setupFiles": ["<rootDir>/config/polyfills.js"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
@@ -123,14 +133,26 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     },
-    "moduleFileExtensions": ["web.js", "js", "json", "web.jsx", "jsx", "node", "mjs"]
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node",
+      "mjs"
+    ]
   },
   "babel": {
-    "presets": ["react-app"]
+    "presets": [
+      "react-app"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

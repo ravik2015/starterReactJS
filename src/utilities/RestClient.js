@@ -14,11 +14,11 @@ var config = {
 };
 
 class RestClient {
-  static post(url, params) {
+  static post(url, params, token = '') {
     return new Promise(function(fulfill, reject) {
-      //config.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+      config.headers['authorization'] = token;
       axios
-        .post(Connection.getResturl() + url, JSON.stringify(params), config)
+        .post(Connection.getResturl(url), JSON.stringify(params), config)
 
         .then(function(response) {
           fulfill(response.data);
@@ -33,7 +33,8 @@ class RestClient {
     });
   }
 
-  static put(url, params) {
+  static put(url, params, token = '') {
+    config.headers['authorization'] = token;
     return new Promise(function(fulfill, reject) {
       axios
         .put(Connection.getResturl() + url, JSON.stringify(params), config)
@@ -50,11 +51,11 @@ class RestClient {
     });
   }
 
-  static delete(url, params) {
-    let query = querystring.stringify(params);
+  static delete(url, token = '') {
+    config.headers['authorization'] = token;
     return new Promise(function(fulfill, reject) {
       axios
-        .delete(Connection.getResturl() + url + '?' + query, config)
+        .delete(Connection.getResturl() + url, config)
         .then(function(response) {
           fulfill(response.data);
         })
@@ -68,14 +69,38 @@ class RestClient {
     });
   }
 
-  static get(url, params) {
+  static get(url, params, token = '') {
     let query = querystring.stringify(params);
+    config.headers['authorization'] = token;
     return new Promise(function(fulfill, reject) {
       axios
         .get(Connection.getResturl() + url + '?' + query, config)
 
         .then(function(response) {
           fulfill(response.data);
+        })
+        .catch(function(error) {
+          if (error && error.response) {
+            fulfill(error.response.data);
+          } else {
+            reject(error);
+          }
+        });
+    });
+  }
+
+  /*************** Form-Data Method ***********/
+  static postFormData(url, params, token = '') {
+    config.headers['Content-Type'] = 'multipart/form-data';
+    return new Promise(function(fulfill, reject) {
+      var body = new FormData();
+      body.append('attachment', params);
+
+      axios
+        .post(Connection.getResturl(url), body, config)
+
+        .then(function(response) {
+          fulfill({ status: response.status, data: response.data });
         })
         .catch(function(error) {
           if (error && error.response) {

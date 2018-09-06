@@ -1,6 +1,6 @@
 /*
  * @file: AppRoute.js
- * @description: Defined all routers
+ * @description: Defined routers layouts
  * @date: 04.07.2018
  * @author: Jasdeep Singh
 */

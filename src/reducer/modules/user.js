@@ -20,7 +20,6 @@ export default function reducer(state = initialState, action) {
       return { ...state, ...{ loggedIn: true }, ...action.data };
 
     case TYPE.LOG_OUT:
-      // eslint-disable-next-line
       let _remember = state.remember;
       return { ...initialState, ...{ remember: _remember } };
 

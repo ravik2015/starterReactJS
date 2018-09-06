@@ -1,3 +1,11 @@
+/*
+ * @file: prototypes.js
+ * @description: Custom prototypes here
+ * @date: 04.07.2018
+ * @author: Jasdeep Singh
+ * 
+ */
+
 /************* Captilize first character ************/
 // eslint-disable-next-line
 String.prototype.capitalizeFirstLetter = function() {

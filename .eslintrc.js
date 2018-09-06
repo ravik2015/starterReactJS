@@ -17,7 +17,7 @@ module.exports = {
     //indent: [2, 4],
     'no-console': 1,
     'no-case-declarations': 1,
-    'linebreak-style': [2, 'unix'],
+    //'linebreak-style': [2, 'unix'],
     quotes: [1, 'single'],
     semi: [2, 'always'],
     'prettier/prettier': [2, null, '@prettier']

@@ -11,7 +11,9 @@ const Message = {
   success: 'Success',
   error: 'Error!',
   commonError: 'Something went wrong!',
-  logout: 'Logout!'
+  logout: 'Logout!',
+  requiredField: name => `${name} is required!`,
+  validEmail: 'Please enter valid email.'
 };
 
 module.exports = Message;

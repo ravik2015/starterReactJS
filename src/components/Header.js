@@ -10,12 +10,10 @@ export default () => {
         <Link to="/" className="pull-left">
           <img src={logo} alt="logo" />
         </Link>
-
         <Link to="/" className="pull-right">
           <img src={menu} alt="logo" />
         </Link>
       </div>
-
       <button
         type="button"
         className="navbar-toggler"
@@ -24,7 +22,6 @@ export default () => {
       >
         <span className="navbar-toggler-icon" />
       </button>
-
       <div id="navbarCollapse" className="collapse navbar-collapse">
         <form className="form-inline my-2 my-lg-0">
           <input
@@ -34,7 +31,6 @@ export default () => {
             aria-label="Search"
           />
         </form>
-
         <ul className="navbar-nav ml-auto mt-2 mt-md-0">
           <li>
             <span className="proicon">Admin</span>

@@ -45,7 +45,6 @@ export const login = (params, cb) => {
           message: message.commonError,
           type: message.error
         };
-
         cb(res);
       });
   };
@@ -54,32 +53,25 @@ export const login = (params, cb) => {
 /******** action creator to log user out of the application **********/
 export const logOut = (params, cb) => {
   return dispatch => {
-    dispatch(log_out());
-    let res = {
-      status: true,
-      message: message.logout,
-      type: message.logout
-    };
-    cb(res);
-    // RestClient.delete("user/logout", "", params.token)
-    //     .then(result => { console.log("result", result)
-    //         if (result) {
-    //             dispatch(log_out());
-    //             let res = {
-    //                 status: true,
-    //                 message: message.logout,
-    //                 type: message.logout
-    //             };
-    //             cb(res);
-    //         }
-    //     })
-    //     .catch(error => {
-    //         let res = {
-    //             status: false,
-    //             message: message.commonError.
-    //             type: message.error
-    //         };
-    //         cb(res);
-    //     });
+    RestClient.delete('user/logout', params.token)
+      .then(result => {
+        if (result) {
+          dispatch(log_out());
+          let res = {
+            status: true,
+            message: message.logout,
+            type: message.logout
+          };
+          cb(res);
+        }
+      })
+      .catch(error => {
+        let res = {
+          status: false,
+          message: message.commonError,
+          type: message.error
+        };
+        cb(res);
+      });
   };
 };
