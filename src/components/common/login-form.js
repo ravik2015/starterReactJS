@@ -10,7 +10,7 @@ const LoginForm = ({
   loggingIn,
   _handleSubmit,
   _handleSubmitFailed,
-  _changePasswordVisibility
+  _handlePasswordVisibility
 }) => {
   return (
     <LocalForm
@@ -42,7 +42,7 @@ const LoginForm = ({
             }}
           />
           <div className="input-group-append">
-            <span onClick={_changePasswordVisibility} className="input-group-text">
+            <span onClick={_handlePasswordVisibility} className="input-group-text">
               <Icon> {!password_visibility ? 'visibility_off' : 'visibility'}</Icon>
             </span>
           </div>

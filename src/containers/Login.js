@@ -60,20 +60,19 @@ class Login extends Component {
     });
   };
   /*************** Password Visibility toggle *************/
-  changePasswordVisibility = () => {
+  handlePasswordVisibility = () => {
     this.setState({
       password_visibility: !this.state.password_visibility
     });
   };
 
   render() {
-    let context = this;
     const { loggingIn, validationErr, password_visibility } = this.state;
     return (
       <div className="container-fluid">
         <div className="row">
           <AlertMsg
-            onPress={() => context.setState({ open: false })}
+            onPress={() => this.setState({ open: false })}
             isShowingModal={this.state.open}
             msg={this.state.msg}
             type={this.state.msgType}
@@ -96,7 +95,7 @@ class Login extends Component {
                   password_visibility={password_visibility}
                   _handleSubmit={this.handleLogin}
                   _handleSubmitFailed={this.handleSubmitFailed}
-                  _changePasswordVisibility={this.changePasswordVisibility}
+                  _handlePasswordVisibility={this.handlePasswordVisibility}
                 />
               </div>
             </div>
