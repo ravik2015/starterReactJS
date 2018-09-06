@@ -90,7 +90,7 @@ class Login extends Component {
                     <span> {this.state.validationErr}. </span>
                   </div>
                 )}
-                <label className="center">Welcome to React</label>
+                <label className="center">Login</label>
                 <LoginForm
                   loggingIn={loggingIn}
                   password_visibility={password_visibility}
