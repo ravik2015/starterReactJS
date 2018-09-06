@@ -8,13 +8,12 @@ React Project For Scaleable Apps.
 - Redux
 - Prettier
 - Husky
-- ES-Next
 - ESLint
 
 ### Running it
 ```
-npm install
-npm start
+yarn install
+yarn start
 ```
 
 ### Learn more
