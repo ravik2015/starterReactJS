@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactLoader from 'react-loaders';
 
-export default ({ loading = true }) => {
+const Loader = ({ loading }) => {
   return (
     loading && (
       <div
@@ -22,3 +23,13 @@ export default ({ loading = true }) => {
     )
   );
 };
+
+Loader.propTypes = {
+  loading: PropTypes.bool.isRequired
+};
+
+Loader.defaultProps = {
+  loading: true
+};
+
+export default Loader;
