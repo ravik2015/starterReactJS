@@ -117,13 +117,8 @@
     "predeploy": "npm run build"
   },
   "reactSnapshot": {
-    "include": [
-      "/signin"
-    ],
-    "exclude": [
-      "/signup",
-      "/dashboard/**"
-    ],
+    "include": ["/signin"],
+    "exclude": ["/signup", "/dashboard/**"],
     "snapshotDelay": 5000
   },
   "author": "Jasdeep Singh",
@@ -134,9 +129,7 @@
     "verbose": true
   },
   "babel": {
-    "presets": [
-      "react-app"
-    ]
+    "presets": ["react-app"]
   },
   "eslintConfig": {
     "extends": "react-app"
