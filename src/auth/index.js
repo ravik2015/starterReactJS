@@ -1,5 +1,5 @@
 /*
- * @file: App.js
+ * @file: index.js
  * @description: Auth functions here
  * @date: 10.09.2018
  * @author: Jasdeep Singh
