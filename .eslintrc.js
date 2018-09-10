@@ -21,5 +21,26 @@ module.exports = {
     quotes: [1, 'single'],
     semi: [2, 'always'],
     'prettier/prettier': [2, null, '@prettier']
-  }
+  },
+  overrides: [
+    {
+      // for Node.js server-side js files
+      files: ['server/**/*.js', 'config-server/**/*.js'],
+      env: {
+        browser: false,
+        commonjs: true,
+        es6: true
+      },
+      parserOptions: {
+        ecmaFeatures: {
+          experimentalObjectRestSpread: true,
+          jsx: true
+        },
+        sourceType: 'script'
+      }
+      // rules: {
+      //   strict: [1, 'global']
+      // }
+    }
+  ]
 };

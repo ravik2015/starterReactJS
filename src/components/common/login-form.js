@@ -85,7 +85,7 @@ LoginForm.propTypes = {
   loggingIn: PropTypes.bool.isRequired,
   _handleSubmit: PropTypes.func.isRequired,
   _handleSubmitFailed: PropTypes.func.isRequired,
-  _changePasswordVisibility: PropTypes.func.isRequired
+  _handlePasswordVisibility: PropTypes.func.isRequired
 };
 
 export default LoginForm;

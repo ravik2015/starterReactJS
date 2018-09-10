@@ -7,7 +7,7 @@
 
 import { environment as PATH } from './app-config';
 
-const httpUrl = `${window.location.protocol}//${PATH.LOCAL_API_URL}`;
+const httpUrl = PATH.LOCAL_API_URL;
 
 class Connection {
   static getResturl(url) {

@@ -19,7 +19,7 @@ class Login extends Component {
     };
     this.handleLogin = this.handleLogin.bind(this);
     this.handleSubmitFailed = this.handleSubmitFailed.bind(this);
-    this.changePasswordVisibility = this.changePasswordVisibility.bind(this);
+    this.handlePasswordVisibility = this.handlePasswordVisibility.bind(this);
   }
 
   /******* form validation errors */

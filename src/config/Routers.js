@@ -8,7 +8,7 @@
 import React from 'react';
 import { Switch } from 'react-router-dom';
 import AppRoute from './AppRoute';
-import { auth } from '../utilities/auth';
+import { Auth } from '../auth';
 import NotFound from '../components/NotFound';
 import { frontLayout, dashboardLayout } from '../components/Layouts';
 import Login from '../containers/Login';
@@ -22,7 +22,7 @@ const Routers = store => {
           exact={true}
           path="/"
           component={Login}
-          requireAuth={auth}
+          requireAuth={Auth}
           layout={frontLayout}
           store={store}
           type="public"
@@ -32,7 +32,7 @@ const Routers = store => {
           exact
           path="/dashboard"
           component={Dashboard}
-          requireAuth={auth}
+          requireAuth={Auth}
           layout={dashboardLayout}
           store={store}
         />
@@ -41,7 +41,7 @@ const Routers = store => {
           exact
           path="*"
           component={NotFound}
-          requireAuth={() => false}
+          requireAuth={Auth}
           layout={frontLayout}
           store={store}
           type="public"

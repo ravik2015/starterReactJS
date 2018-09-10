@@ -1,0 +1,19 @@
+%YAML 1.2
+---
+env: NODE_ENV
+http:
+  context: HTTP_CONTEXT
+  ip: HTTP_IP
+  port: HTTP_PORT
+  timeout: HTTP_SERVER_TIMEOUT
+  static:
+    root: HTTP_STATIC_PATH
+  apiUrls:
+    core: CORE_API_URL
+    inventory: INVENTORY_API_URL
+  auth0:
+      domain: AUTH0_DOMAIN
+      clientId: AUTH0_CLIENT_ID
+      clientSecret: AUTH0_CLIENT_SECRET
+      callbackUri: AUTH0_CALLBACK_URI
+...
