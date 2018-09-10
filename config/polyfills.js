@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 'use strict';
 
 if (typeof Promise === 'undefined') {

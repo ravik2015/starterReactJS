@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 'use strict';
 
 const path = require('path');

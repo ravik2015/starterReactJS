@@ -14,6 +14,7 @@ React Project For Scaleable Apps.
 ```
 yarn install
 yarn start
+yarn build
 ```
 
 ### Learn more

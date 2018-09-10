@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 'use strict';
 
 // Do this as the first thing so that any code reading it knows the right env.
@@ -54,20 +55,25 @@ measureFileSizesBeforeBuild(paths.appBuild)
   .then(
     ({ stats, previousFileSizes, warnings }) => {
       if (warnings.length) {
+        // eslint-disable-next-line
         console.log(chalk.yellow('Compiled with warnings.\n'));
+        // eslint-disable-next-line
         console.log(warnings.join('\n\n'));
+        // eslint-disable-next-line
         console.log(
           '\nSearch for the ' +
             chalk.underline(chalk.yellow('keywords')) +
             ' to learn more about each warning.'
         );
+        // eslint-disable-next-line
         console.log(
           'To ignore, add ' + chalk.cyan('// eslint-disable-next-line') + ' to the line before.\n'
         );
       } else {
+        // eslint-disable-next-line
         console.log(chalk.green('Compiled successfully.\n'));
       }
-
+      // eslint-disable-next-line
       console.log('File sizes after gzip:\n');
       printFileSizesAfterBuild(
         stats,
@@ -76,6 +82,7 @@ measureFileSizesBeforeBuild(paths.appBuild)
         WARN_AFTER_BUNDLE_GZIP_SIZE,
         WARN_AFTER_CHUNK_GZIP_SIZE
       );
+      // eslint-disable-next-line
       console.log();
 
       const appPackage = require(paths.appPackageJson);
@@ -85,6 +92,7 @@ measureFileSizesBeforeBuild(paths.appBuild)
       printHostingInstructions(appPackage, publicUrl, publicPath, buildFolder, useYarn);
     },
     err => {
+      // eslint-disable-next-line
       console.log(chalk.red('Failed to compile.\n'));
       printBuildError(err);
       process.exit(1);
@@ -93,6 +101,7 @@ measureFileSizesBeforeBuild(paths.appBuild)
 
 // Create the production build and print the deployment instructions.
 function build(previousFileSizes) {
+  // eslint-disable-next-line
   console.log('Creating an optimized production build...');
 
   let compiler = webpack(config);
@@ -115,6 +124,7 @@ function build(previousFileSizes) {
         (typeof process.env.CI !== 'string' || process.env.CI.toLowerCase() !== 'false') &&
         messages.warnings.length
       ) {
+        // eslint-disable-next-line
         console.log(
           chalk.yellow(
             '\nTreating warnings as errors because process.env.CI = true.\n' +

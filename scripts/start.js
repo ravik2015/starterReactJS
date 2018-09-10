@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 'use strict';
 
 // Do this as the first thing so that any code reading it knows the right env.
@@ -44,6 +45,7 @@ const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
 
 if (process.env.HOST) {
+  // eslint-disable-next-line
   console.log(
     chalk.cyan(
       `Attempting to bind to HOST environment variable: ${chalk.yellow(
@@ -51,8 +53,11 @@ if (process.env.HOST) {
       )}`
     )
   );
+  // eslint-disable-next-line
   console.log(`If this was unintentional, check that you haven't mistakenly set it in your shell.`);
+  // eslint-disable-next-line
   console.log(`Learn more here: ${chalk.yellow('http://bit.ly/2mwWSwH')}`);
+  // eslint-disable-next-line
   console.log();
 }
 
@@ -78,11 +83,13 @@ choosePort(HOST, DEFAULT_PORT)
     // Launch WebpackDevServer.
     devServer.listen(port, HOST, err => {
       if (err) {
+        // eslint-disable-next-line
         return console.log(err);
       }
       if (isInteractive) {
         clearConsole();
       }
+      // eslint-disable-next-line
       console.log(chalk.cyan('Starting the development server...\n'));
       openBrowser(urls.localUrlForBrowser);
     });
@@ -96,6 +103,7 @@ choosePort(HOST, DEFAULT_PORT)
   })
   .catch(err => {
     if (err && err.message) {
+      // eslint-disable-next-line
       console.log(err.message);
     }
     process.exit(1);
