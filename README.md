@@ -1,6 +1,6 @@
 ## React/Redux
 
-React Project For Scaleable Apps.
+React/Redux Project For Scaleable Apps.
 
 ### Includes
 
